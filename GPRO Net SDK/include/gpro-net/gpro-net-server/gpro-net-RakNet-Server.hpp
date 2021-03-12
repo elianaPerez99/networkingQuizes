@@ -68,7 +68,16 @@ namespace gproNet
 		//		return: was message processed
 		virtual bool ProcessMessage(RakNet::BitStream& bitstream, RakNet::SystemAddress const sender, RakNet::Time const dtSendToReceive, RakNet::MessageID const msgID);
 		
-		//List of game instances
+		/*List of game instances
+		game instance should have:
+		bool isAvailable
+		(depending on the game)
+		list of current players
+		const int max players
+
+		function to add and remove players
+		function to update isAvailable and list of current players
+		*/
 
 	};
 

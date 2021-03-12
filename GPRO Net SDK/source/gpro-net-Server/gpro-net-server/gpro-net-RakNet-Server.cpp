@@ -23,10 +23,11 @@
 */
 
 #include "gpro-net/gpro-net-server/gpro-net-RakNet-Server.hpp"
-enum GameMessages
+/*enum GameMessages
 {
-	
-};
+	ID_JOIN_ROOM
+	ID_USER_INPUT
+};*/
 
 namespace gproNet
 {
@@ -85,7 +86,7 @@ namespace gproNet
 		*/
 		/*case ID_USER_INPUT
 		{
-			read the command as string
+			read the command as string (im assuming its a string but it could be anything)
 			if(command == "/disconnect)
 			{
 			}
