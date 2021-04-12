@@ -30,7 +30,7 @@ namespace gproNet
 	cRakNetClient::cRakNetClient()
 	{
 		RakNet::SocketDescriptor sd;
-		char SERVER_IP[16] = "172.16.2.197";
+		char SERVER_IP[16] = "127.0.0.1";
 
 		peer->Startup(1, &sd, 1);
 		peer->SetMaximumIncomingConnections(0);
@@ -82,22 +82,8 @@ namespace gproNet
 		{
 			// client receives greeting, just print it
 			ReadTest(bitstream);
-			/*cout << "which do you want to join?"
-			cin >> answer
-			RakNet::BitStream bitstream_w;
-			Write(Message id) in this case ID_ASK_JOIN
-			WriteTest(bitstream_w, answer);*/
-
 		}	return true;
-		/*case userCanInput
-		{
-			cout << "type command"
-			cin >> command
-			RakNet::BitStream bitstream_w;
-			Write(Message id) in this case ID_USER_INPUT
-			WriteTest(bitstream_w, command);
-		}
-		*/
+
 		}
 		return false;
 	}

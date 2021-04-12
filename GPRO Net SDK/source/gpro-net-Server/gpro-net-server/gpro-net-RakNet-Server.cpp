@@ -23,11 +23,7 @@
 */
 
 #include "gpro-net/gpro-net-server/gpro-net-RakNet-Server.hpp"
-/*enum GameMessages
-{
-	ID_JOIN_ROOM
-	ID_USER_INPUT
-};*/
+
 
 namespace gproNet
 {
@@ -73,27 +69,9 @@ namespace gproNet
 			RakNet::BitStream bitstream_w;
 			ReadTest(bitstream);
 			WriteTest(bitstream_w, "Hello client from server");
-			//writeTest(bitstream_w,...)
-			// ... is the games as a string + ": " + string isAvailable
 			peer->Send(&bitstream_w, MEDIUM_PRIORITY, UNRELIABLE_SEQUENCED, 0, sender, false);
 		}	return true;
-		/*case ID_JOIN_ROOM
-		{
-			read the number/string that the client picked
-			assign them to that game room (list is is server)
-			check if game room is full, update state
-		}
-		*/
-		/*case ID_USER_INPUT
-		{
-			read the command as string (im assuming its a string but it could be anything)
-			if(command == "/disconnect)
-			{
-			}
-			update the game room status 
-			write message to said client using the packet information informing them that they are now in the main lobby
-		}
-		*/
+
 		}
 		return false;
 	}
